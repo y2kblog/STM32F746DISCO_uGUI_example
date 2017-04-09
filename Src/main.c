@@ -488,19 +488,6 @@ void pset(UG_S16 x, UG_S16 y, UG_COLOR col)
 	BSP_LCD_DrawPixel( (uint16_t)x, (uint16_t)y, (0xFF000000 | (uint32_t)col) );
 }
 
-/* Hardware accelerator */
-UG_RESULT _HW_DrawLine(UG_S16 x1, UG_S16 y1, UG_S16 x2, UG_S16 y2, UG_COLOR c)
-{
-	UG_DrawLine(x1, y1, x2, y2, c);
-	return UG_RESULT_OK;
-}
-
-UG_RESULT _HW_FillFrame(UG_S16 x1, UG_S16 y1, UG_S16 x2, UG_S16 y2, UG_COLOR c)
-{
-	UG_FillFrame(x1, y1, x2, y2, c);
-	return UG_RESULT_OK;
-}
-
 /**
   * @}
   */ 
